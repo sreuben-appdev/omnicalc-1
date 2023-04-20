@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Target Omnicalc 1</title>
+    <meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="8ih0iaobZgdvi8tQi3hCBM33GAzshpYc0R3d1xInP1/b8w7WSXsKZr/dcgFy5a1Gb3P7Ej3gV6OQnMaqHpk7pw==" />
+
+    <!-- Expand the number of characters we can use in the document beyond basic ASCII 🎉 -->
+    <meta charset="utf-8">
+
+    <!-- Make it responsive to small screens -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+
+    <link rel="stylesheet" media="all" href="/assets/application-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css" />
+  </head>
+
+  <body>
+    <table style="width: 100%" border="1">
+      <tr>
+        <td>
+          <strong>Targets</strong>
+        </td>
+
+        <td>
+          <a href="/square/new">
+            Square with Form
+          </a>
+        </td>
+
+        <td>
+          <a href="/square_root/new">
+            Square Root with Form
+          </a>
+        </td>
+
+        <td>
+          <a href="/payment/new">
+            Payment with Form
+          </a>
+        </td>
+
+        <td>
+          <a href="/random/new">
+            Random with Form
+          </a>
+        </td>
+      </tr>
+    </table>
+    <h1>
+  Payment Results
+</h1>
+
+<dl>
+  <dt>
+    APR
+  </dt>
+  <dd>
+    <%= @num_apr.to_s(:percentage, { :precision => 4 } ) %>
+  </dd>
+
+  <dt>
+    Number of years
+  </dt>
+  <dd>
+    <%= @periods %>
+  </dd>
+
+  <dt>
+    Principal
+  </dt>
+  <dd>
+    <%= @principal %>
+  </dd>
+
+  <dt>
+    Payment
+  </dt>
+  <dd>
+    <%= @total_payment.to_s(:currency, { :precision => 2 }) %>
+  </dd>
+</dl>
+
+<a href="/payment/new">
+  Calculate another payment
+</a>
+
+  </body>
+</html>
